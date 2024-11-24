@@ -13,14 +13,14 @@ pipeline {
     }
 
     stages {
-        stage('Init') {
-            steps {
-                withCredentials([file(credentialsId: 'youCredId', variable: 'envFile')]) {
-                    sh 'cp "$envFile" "$WORKSPACE"'
-                    echo "Copied envFile into $WORKSPACE !"
-                }
-            }
-        }
+        // stage('Init') {
+        //     steps {
+        //         withCredentials([file(credentialsId: 'youCredId', variable: 'envFile')]) {
+        //             sh 'cp "$envFile" "$WORKSPACE"'
+        //             echo "Copied envFile into $WORKSPACE !"
+        //         }
+        //     }
+        // }
 
         // stage('Dockerize') {
         //     steps {
